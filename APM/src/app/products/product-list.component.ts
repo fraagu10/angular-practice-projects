@@ -1,5 +1,6 @@
 import { Component, OnInit } from "@angular/core";
 import { IProduct } from "./product";
+import { ProductService } from "./product.service";
 
 @Component({
   selector: 'pm-products',
@@ -12,9 +13,13 @@ export class ProductListComponent implements OnInit {
   imgWidth: number = 54;
   imgMargin: number = 2;
   showImage: boolean = false;
-
+  filteredProducts: IProduct[] = []
+  products: IProduct[] = [];
   private _listFilter: string = "saw";
 
+  constructor(private productService: ProductService) {}
+
+  // Getters and Setters
   get listFilter(): string {
     return this._listFilter;
   }
@@ -22,33 +27,14 @@ export class ProductListComponent implements OnInit {
     this._listFilter = value;
     this.filteredProducts = this.performFilter(value);
   }
+  
+  // perform component initilization
+  ngOnInit(): void {
+    this.products = this.productService.getProducts();
+    this.filteredProducts = this.products;
+  }
 
-  filteredProducts: IProduct[] = []
-  products: IProduct[] = [
-    {
-      "productId": 8,
-      "productName": "Saw",
-      "productCode": "TBX-0022",
-      "releaseDate": "May 15, 2021",
-      "description": "15-inch steel blade hand saw",
-      "price": 11.55,
-      "starRating": 3.7,
-      "imageUrl": "assets/images/saw.png"
-    },
-    {
-      "productId": 10,
-      "productName": "Video Game Controller",
-      "productCode": "GMG-0042",
-      "releaseDate": "October 15, 2020",
-      "description": "Standard two-button video game controller",
-      "price": 35.95,
-      "starRating": 4.6,
-      "imageUrl": "assets/images/xbox-controller.png"
-    }
-  ];
-
-  ngOnInit(): void {}
-
+  // Methods
   toggleImages(): void {
     this.showImage = !this.showImage;
   }
