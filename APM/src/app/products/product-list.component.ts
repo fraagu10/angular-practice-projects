@@ -13,14 +13,13 @@ export class ProductListComponent implements OnInit {
   imgMargin: number = 2;
   showImage: boolean = false;
 
-  private _listFilter: string = "cart";
+  private _listFilter: string = "saw";
 
   get listFilter(): string {
     return this._listFilter;
   }
   set listFilter(value: string) {
     this._listFilter = value;
-    console.log("In setter: ", value);
     this.filteredProducts = this.performFilter(value);
   }
 
@@ -48,9 +47,7 @@ export class ProductListComponent implements OnInit {
     }
   ];
 
-  ngOnInit(): void {
-    console.log("OnInit excecuted");
-  }
+  ngOnInit(): void {}
 
   toggleImages(): void {
     this.showImage = !this.showImage;
@@ -62,4 +59,7 @@ export class ProductListComponent implements OnInit {
       product.productName.toLocaleLowerCase().includes(filterBy));
   }
   
+  onRatingClicked(message: string): void {
+    this.pageTitle = "Product List: " + message;
+  }
 }
