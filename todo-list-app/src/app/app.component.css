@@ -1,0 +1,40 @@
+.container {
+  display: grid;
+  grid-template-areas:
+    "header header"
+    "sidebar content"
+    "footer footer";
+  grid-template-columns: 1fr 3fr;
+  gap: 20px;
+}
+
+header {
+  grid-area: header;
+}
+
+article {
+  grid-area: content;
+}
+
+aside {
+  grid-area: sidebar;
+}
+
+footer {
+  grid-area: footer;
+  justify-content: center;
+  display: flex;
+}
+
+button, input {
+  margin: 2%;
+  width: 75%;
+  height: 45px;
+}
+
+@media screen and (min-width: 600px) {
+  .main {
+    width: 70%;
+  }
+}
+
