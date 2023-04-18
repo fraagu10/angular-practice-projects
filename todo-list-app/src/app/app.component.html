@@ -3,11 +3,19 @@
     <h1>This is a multipurpose webapp</h1>
   </header>
   <article>
-    <h1>My To Do List</h1>
-      <h2>What would you like to do today?</h2>
-      <ul>
-        <li *ngFor="let item of items">{{item.description}}</li>
-      </ul>
+    <mat-card>
+      <mat-card-title>
+        <h1>My To Do List</h1>
+      </mat-card-title>
+      <mat-card-subtitle>
+        <label for="addItemInput">Click on completed tasks.</label><br><br>
+      </mat-card-subtitle>
+      <mat-card-content>
+        <ul>
+          <li *ngFor="let item of items">{{item.description}}</li>
+        </ul>
+      </mat-card-content>
+    </mat-card>
   </article>
 
   <aside>
@@ -22,7 +30,7 @@
         <input #newItem placeholder="add an item" (keyup.enter)="addItem(newItem.value); newItem.value = ''"/>
       </mat-card-content>
       <mat-card-actions>
-        <button class="btn-primary" (click)="addItem(newItem.value)">Add</button>
+        <button class="btn-primary" mat-raised-button (click)="addItem(newItem.value)">Add</button>
       </mat-card-actions>
     </mat-card>
   </aside>

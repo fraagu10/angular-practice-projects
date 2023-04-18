@@ -24,12 +24,14 @@ footer {
   grid-area: footer;
   justify-content: center;
   display: flex;
+  border: 1px;
+  border-style: groove;
 }
 
-button, input {
-  margin: 2%;
-  width: 75%;
-  height: 45px;
+input {
+  margin: 1%;
+  width: 95%;
+  height: 54px;
 }
 
 @media screen and (min-width: 600px) {
