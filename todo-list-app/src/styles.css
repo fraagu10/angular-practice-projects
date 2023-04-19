@@ -2,6 +2,8 @@
 
 body {
   font-family: Helvetica, Arial, sans-serif;
+  background-color: rgb(220, 157, 57);
+
 }
 
 .btn-wrapper {
@@ -35,11 +37,9 @@ body {
 .btn-primary {
   color: #fff;
   background-color: #000;
-  width: 50%;
+  width: 20%;
   padding: 0.75rem;
   font-size: 1.3rem;
-  border: black solid 2px;
-  margin-left: 25%;
 }
 
 .btn-primary:hover {
