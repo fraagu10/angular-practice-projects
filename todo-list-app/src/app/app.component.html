@@ -1,31 +1,33 @@
-<div class="container text-center">
-    <h2>This is my To-Do List App</h2>
-  
-    <mat-card>
-      <mat-card-title>
-        <h3>To-Do</h3>
-      </mat-card-title>
-      <mat-card-subtitle>
-        <label for="addItemInput">What would you like to do today?</label><br><br>
-      </mat-card-subtitle>
-      <mat-card-content>
-        <input #newItem placeholder="Add a task" (keyup.enter)="addItem(newItem.value); newItem.value = ''"/>
-      </mat-card-content>
-      <mat-card-actions>
-        <button class="btn-primary" mat-raised-button (click)="addItem(newItem.value)">Add</button>
-      </mat-card-actions>
-    </mat-card>
+<mat-toolbar class="navbar-nav">
+  <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
+    <mat-icon>menu</mat-icon>
+  </button>
+  <span>To-Do List App</span>  
+</mat-toolbar>
 
-    <mat-card>
-      <mat-card-title>
-        <h3>My To Do List</h3>
-      </mat-card-title>
-      <mat-card-content >
-        <ul *ngFor="let item of items" class="col-1">
-          <li>{{item.description}}</li>
-        </ul>
-      </mat-card-content>
-    </mat-card>
+<div class="container text-center">  
+  <mat-card>
+    <mat-card-subtitle>
+      <label for="addItemInput">What would you like to do today?</label><br><br>
+    </mat-card-subtitle>
+    <mat-card-content>
+      <input #newItem placeholder="Add a task" (keyup.enter)="addItem(newItem.value); newItem.value = ''"/>
+    </mat-card-content>
+    <mat-card-actions>
+      <button class="btn-primary" mat-raised-button (click)="addItem(newItem.value)">Add</button>
+    </mat-card-actions>
+  </mat-card>
+
+  <mat-card>
+    <mat-card-title>
+      <h3>My To Do List</h3>
+    </mat-card-title>
+    <mat-card-content>
+      <ul *ngFor="let item of items">
+        <li>{{item.description}}</li>
+      </ul>
+    </mat-card-content>
+  </mat-card>
 
   <footer>created by: Franco Aguilar Hernandez</footer>
 </div>
