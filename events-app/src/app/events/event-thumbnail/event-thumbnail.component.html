@@ -1,0 +1,20 @@
+<div class="card">
+  <div class="card-header">
+    {{event.name}}
+  </div>
+  <div class="card-body">
+    <div>
+    <!-- <div style="margin-top:30px"> -->
+      Event ID: {{event.id}} 
+    </div>
+    <div>
+      Date: {{event.date}}
+    </div>
+    <div>
+      Time: {{event.time}}
+    </div>
+    <div>
+      Address: {{event.location.address}} {{event.location.city}}, {{event.location.country}}
+    </div>
+  </div>
+</div>
