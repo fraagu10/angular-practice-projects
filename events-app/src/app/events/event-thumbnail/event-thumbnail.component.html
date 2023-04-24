@@ -1,10 +1,10 @@
-<div class="card">
+<div class="card" *ngFor="let event of events" style="margin-top:30px">
   <div class="card-header">
     {{event.name}}
   </div>
   <div class="card-body">
+    <!-- <div> -->
     <div>
-    <!-- <div style="margin-top:30px"> -->
       Event ID: {{event.id}} 
     </div>
     <div>
