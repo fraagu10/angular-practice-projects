@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { EventsService } from './shared/events.service';
+import { EventService } from './shared/events.service';
 
 @Component({
   templateUrl: './events.component.html',
@@ -9,10 +9,10 @@ export class EventsComponent implements OnInit {
 
   events?: any[];
 
-  constructor(private eventService: EventsService) { }
+  constructor(private eventService: EventService) { }
 
   ngOnInit(): void {
-    this.events = this.eventService.getEvents();
+    this.events = this.eventService.getAllEvents();
   }
 
 }

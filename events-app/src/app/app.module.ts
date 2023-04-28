@@ -5,7 +5,7 @@ import { AppComponent } from './app.component';
 import { EventsComponent } from './events/events.component';
 import { EventThumbnailComponent } from './events/event-thumbnail/event-thumbnail.component';
 import { NavComponent } from './nav/nav/nav.component';
-import { EventsService } from './events/shared/events.service';
+import { EventService } from './events/shared/events.service';
 import { EventDetailsComponent } from './events/event-details/event-details.component';
 import { AppRoutingModule } from './app-routing.module';
 
@@ -21,7 +21,7 @@ import { AppRoutingModule } from './app-routing.module';
     BrowserModule,
     AppRoutingModule
   ],
-  providers: [EventsService],
+  providers: [EventService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

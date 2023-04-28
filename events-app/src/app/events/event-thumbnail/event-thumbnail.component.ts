@@ -7,11 +7,11 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class EventThumbnailComponent implements OnInit {
 
-  @Input() events: any;
+  @Input() event: any;
 
   constructor() { }
 
   ngOnInit(): void {
-  }
+  } 
 
 }

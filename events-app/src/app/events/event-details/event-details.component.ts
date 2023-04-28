@@ -1,19 +1,19 @@
 import { Component, OnInit } from '@angular/core';
-import { EventsService } from '../shared/events.service';
+import { EventService } from '../shared/events.service';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
-  selector: 'app-event-details',
   templateUrl: './event-details.component.html',
   styleUrls: ['./event-details.component.css']
 })
 export class EventDetailsComponent implements OnInit {
+
   event: any;
 
-  constructor(private eventService: EventsService) { }
+  constructor(private eventService: EventService, private route: ActivatedRoute) { }
 
   ngOnInit(): void {
-    this.event = this.eventService.getEvent(2);
-    console.log(this.event);
+    this.event = this.eventService.getEvent(Number(this.route.snapshot.params['id']));
   }
 
 }

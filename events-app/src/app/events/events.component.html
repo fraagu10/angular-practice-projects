@@ -2,7 +2,9 @@
   <h1>Events</h1>
   <p>This is a current list of events:</p>
   <hr>
-
-  <event-thumbnail [events]="events"></event-thumbnail>
+  <div *ngFor="let event of events">
+    <div>
+      <event-thumbnail [event]="events"></event-thumbnail>
+    </div>
+  </div>
 </div>
-  

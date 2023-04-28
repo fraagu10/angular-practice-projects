@@ -1,20 +1,14 @@
-<div class="card" *ngFor="let event of events" style="margin-top:30px">
+<div class="card" style="margin-top:30px" *ngFor="let event of event" [routerLink]="['/events', event.id]">
   <div class="card-header">
-    {{event.name}}
+    {{event?.name}}
   </div>
   <div class="card-body">
-    <!-- <div> -->
+    <div><em>Event ID:</em> {{event?.id}}</div>
+    <div><b>Date:</b> {{event?.date}}</div>
+    <div><b>Time:</b> {{event?.time}}</div>
     <div>
-      Event ID: {{event.id}} 
-    </div>
-    <div>
-      Date: {{event.date}}
-    </div>
-    <div>
-      Time: {{event.time}}
-    </div>
-    <div>
-      Address: {{event.location.address}} {{event.location.city}}, {{event.location.country}}
+      <span><b>Address:</b> {{event.location?.address}}</span>
+      <span>{{event.location?.city}}, {{event.location?.country}}</span>
     </div>
   </div>
 </div>

@@ -3,7 +3,7 @@ import { Injectable } from '@angular/core';
 @Injectable({
   providedIn: 'root'
 })
-export class EventsService {
+export class EventService {
 
   EVENTS = [
     {
@@ -316,13 +316,11 @@ export class EventsService {
     }
   ]
 
-  constructor() { }
-
-  getEvents() {
+  getAllEvents() {
     return this.EVENTS;
   }
 
   getEvent(id: number) {
-    this.EVENTS.find(event => event.id === id);
+    return this.EVENTS.find(event => event.id === id);
   }
 }
