@@ -1,0 +1,13 @@
+a.nav-link {
+  color: rgb(232, 232, 232);
+}
+
+a.navbar-brand {
+  font-weight: 500;
+  font-size: xx-large;
+  color: rgb(232, 232, 232);
+}
+
+.navbar {
+  background-color: #003153;
+}
