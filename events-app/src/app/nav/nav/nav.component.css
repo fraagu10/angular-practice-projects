@@ -1,5 +1,7 @@
 a.nav-link {
   color: rgb(232, 232, 232);
+  margin-left: 27px;
+  margin-right: 27px;
 }
 
 a.navbar-brand {
