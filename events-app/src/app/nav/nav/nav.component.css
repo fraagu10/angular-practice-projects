@@ -1,15 +1,22 @@
 a.nav-link {
-  color: rgb(232, 232, 232);
-  margin-left: 27px;
-  margin-right: 27px;
+  margin-left: 9px;
+  margin-right: 9px;
 }
 
 a.navbar-brand {
   font-weight: 500;
   font-size: xx-large;
-  color: rgb(232, 232, 232);
 }
 
 .navbar {
   background-color: #003153;
+}
+
+a.nav-link.active {
+  color: #f97924;
+  background-color: #003961;
+}
+
+* {
+  color: rgb(232, 232, 232);
 }

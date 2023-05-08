@@ -1,18 +1,17 @@
 <nav class="navbar navbar-expand-lg bg-body-tertiary">
   <div class="container-fluid">
-    <a class="navbar-brand" href="">Welcome</a>
+    <a class="navbar-brand" href="">Angular Events</a>
     
     <div>
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         <li class="nav-item">
-          <a class="nav-link" [routerLink]="['/events']">All Events</a>
+          <a class="nav-link" [routerLink]="['/events']"
+          routerLinkActive="active">All Events</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" [routerLink]="['/create-event']">Create Event</a>
+          <a class="nav-link" [routerLink]="['/create-event']"
+          routerLinkActive="active">Create Event</a>
         </li>
-        <!-- <li class="nav-item">
-          <a class="nav-link" [routerLink]="['/create-event']">All Events</a>
-        </li> -->
       </ul>
     </div>
 
@@ -20,6 +19,14 @@
       <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
       <button class="btn btn-primary" type="submit">Search</button>
     </form>
+
+    <div class="navbar-header navbar-right">
+      <ul class="nav navbar-nav">
+        <li class="nav-item">
+          <a [routerLink]="['user/profile']" class="nav-link">Welcome, Franco</a>
+        </li>
+      </ul>
+    </div>
     
   </div>
 </nav>

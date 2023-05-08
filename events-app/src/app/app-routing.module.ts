@@ -7,6 +7,7 @@ import { CreateEventComponent } from './events/create-event/create-event.compone
 import { PageNotFoundComponent } from './events/error/page-not-found.component';
 import { EventRouteActivatorService } from './events/event-details/event-route-activator.service';
 import { EventListResolver } from './events/events-resolver.service';
+import { UserModule } from './user/user/user.module';
 
 const routes: Routes = [
   { 
@@ -23,6 +24,10 @@ const routes: Routes = [
   },
   { path: "", redirectTo: "/events", pathMatch: "full" },
   { path: "404", component: PageNotFoundComponent },
+  {
+    path: "user", 
+    loadChildren: () => import('./user/user/user.module').then(m => m.UserModule)
+  },
 ]
 
 @NgModule({
