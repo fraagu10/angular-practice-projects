@@ -12,7 +12,7 @@ import { CreateEventComponent } from './events/create-event/create-event.compone
 import { PageNotFoundComponent } from './events/error/page-not-found.component';
 import { EventRouteActivatorService } from './events/event-details/event-route-activator.service';
 import { EventListResolver } from './events/events-resolver.service';
-import { UserModule } from './user/user/user.module';
+import { UserModule } from './user/user.module';
 
 @NgModule({
   declarations: [
