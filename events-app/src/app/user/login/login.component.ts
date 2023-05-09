@@ -6,9 +6,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LoginComponent implements OnInit {
 
+  userName?: string;
+  password: any;
+
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  login(formValues: FormData) {
+    console.log(formValues);
   }
 
 }
