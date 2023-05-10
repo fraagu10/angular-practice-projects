@@ -6,7 +6,7 @@ import { IUser } from './IUser';
 })
 export class AuthService {
 
-  currentUser?: IUser;
+  currentUser!: IUser;
 
   constructor() { }
 
@@ -21,5 +21,11 @@ export class AuthService {
 
   isAuthenticated() {
     return !!this.currentUser;
+  }
+
+  updateCurrentUser(firstName: string, lastName: string) {
+    console.log(this.currentUser);
+    this.currentUser.firstName = firstName;
+    this.currentUser.lastName = lastName;
   }
 }
