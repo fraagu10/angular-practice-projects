@@ -13,6 +13,7 @@ import { PageNotFoundComponent } from './events/error/page-not-found.component';
 import { EventRouteActivatorService } from './events/event-details/event-route-activator.service';
 import { EventListResolver } from './events/events-resolver.service';
 import { UserModule } from './user/user.module';
+import { AuthService } from './user/auth.service';
 
 @NgModule({
   declarations: [
@@ -36,10 +37,12 @@ import { UserModule } from './user/user.module';
       provide: "canDeactivateCreateEvent",
       useValue: checkDirtyState
     },
-    EventListResolver
+    EventListResolver,
+    AuthService
   ],
   bootstrap: [AppComponent]
 })
+
 export class AppModule { }
 
 export function checkDirtyState(component: CreateEventComponent) {
