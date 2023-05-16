@@ -330,8 +330,8 @@ export class EventService {
   }
 
   saveEvent(event: IEvent) {
-    event.id = 999
-    event.sessions = []
-    this.EVENTS.push(event)
+    event.id = 999;
+    event.sessions = [];
+    this.EVENTS.push(event);
   }
 }

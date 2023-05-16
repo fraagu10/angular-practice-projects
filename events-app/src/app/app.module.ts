@@ -4,7 +4,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppComponent } from './app.component';
 import { EventsComponent } from './events/events.component';
 import { EventThumbnailComponent } from './events/event-thumbnail/event-thumbnail.component';
-import { NavComponent } from './nav/nav/nav.component';
+import { NavComponent } from './nav/nav.component';
 import { EventService } from './events/shared/events.service';
 import { EventDetailsComponent } from './events/event-details/event-details.component';
 import { AppRoutingModule } from './app-routing.module';
@@ -15,6 +15,7 @@ import { EventListResolver } from './events/events-resolver.service';
 import { UserModule } from './user/user.module';
 import { AuthService } from './user/auth.service';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { CreateSessionComponent } from './events/event-details/create-session/create-session.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     NavComponent,
     EventDetailsComponent,
     CreateEventComponent,
-    PageNotFoundComponent
+    PageNotFoundComponent,
+    CreateSessionComponent,
   ],
   imports: [
     BrowserModule,

@@ -8,24 +8,28 @@ import { PageNotFoundComponent } from './events/error/page-not-found.component';
 import { EventRouteActivatorService } from './events/event-details/event-route-activator.service';
 import { EventListResolver } from './events/events-resolver.service';
 import { UserModule } from './user/user.module';
+import { CreateSessionComponent } from './events/event-details/create-session/create-session.component';
 
 const routes: Routes = [
-  { 
-    path: "events", component: EventsComponent, 
+  {
+    path: "events", component: EventsComponent,
     resolve: { events: EventListResolver }
   },
-  { 
-    path: "create-event", component: CreateEventComponent,
+  {
+    path: "events/create-event", component: CreateEventComponent,
     canDeactivate: ["canDeactivateCreateEvent"]
   },
-  { 
-    path: "events/:id", component: EventDetailsComponent, 
-    canActivate: [EventRouteActivatorService] 
+  {
+    path: "events/sessions/create-session", component: CreateSessionComponent
+  },
+  {
+    path: "events/:id", component: EventDetailsComponent,
+    canActivate: [EventRouteActivatorService]
   },
   { path: "", redirectTo: "/events", pathMatch: "full" },
   { path: "404", component: PageNotFoundComponent },
   {
-    path: "user", 
+    path: "user",
     loadChildren: () => import('./user/user.module').then(m => m.UserModule)
   },
 ]
