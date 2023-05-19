@@ -1,15 +1,15 @@
-a.nav-link {
-  margin-left: 9px;
-  margin-right: 9px;
+.navbar {
+  background-color: #003153;
 }
 
 a.navbar-brand {
-  font-weight: 500;
-  font-size: xx-large;
+  font-weight: 710;
+  font-size: x-large;
+  color: rgb(232, 232, 232);
 }
 
-.navbar {
-  background-color: #003153;
+a.nav-link {
+  color: rgb(232, 232, 232);
 }
 
 a.nav-link.active {
@@ -17,6 +17,6 @@ a.nav-link.active {
   background-color: #003961;
 }
 
-* {
+/* * {
   color: rgb(232, 232, 232);
-}
+} */
